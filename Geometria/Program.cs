@@ -15,10 +15,12 @@ rettangolo.stampaRettangolo();
 rettangolo.Disegna();
 
 //Secondo Rettangolo
-/*Console.WriteLine("Inserire la base del rettangolo: ");
+Console.WriteLine("Inserire la base del rettangolo: ");
 larghezza = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Inserire l'altezza del rettangolo: ");
 altezza = Convert.ToInt32(Console.ReadLine());
 Rettangolo nuovoRettangolo = new Rettangolo(larghezza, altezza);
-nuovoRettangolo.stampaRettangolo();*/
 
+nuovoRettangolo.stampaRettangolo();
+
+nuovoRettangolo.Disegna();

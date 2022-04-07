@@ -58,10 +58,11 @@ namespace Geometria
                 Console.WriteLine(unitaY);
             }
             Console.Write(" ");
-            for (int i = 0; i < baseRettangolo; i++) //lato inferiore
+            for (int i = 0; i < baseRettangolo - 1; i++) //lato inferiore
             {
                 Console.Write(unitaX);
             }
+            Console.WriteLine(unitaX);
         }
     }
 }
