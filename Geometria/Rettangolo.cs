@@ -17,12 +17,12 @@ namespace Geometria
             this.altezzaRettangolo = y;
         }
 
-        public int calcolaArea() //metodo per calcolare l'area
+        private int calcolaArea() //metodo per calcolare l'area
         {
             return baseRettangolo * altezzaRettangolo;
         }
 
-        public int calcolaPerimetro() //metodo per calcolare il perimetro
+        private int calcolaPerimetro() //metodo per calcolare il perimetro
         {
             return (baseRettangolo + altezzaRettangolo) * 2;
         }
@@ -33,8 +33,35 @@ namespace Geometria
             Console.WriteLine("Base: " + baseRettangolo + "cm");
             Console.WriteLine("Altezza: " + altezzaRettangolo + "cm");
             Console.WriteLine("Perimetro: " + calcolaPerimetro() + "cm");
-            Console.WriteLine("Area: " + calcolaArea() + "cm");
+            Console.WriteLine("Area: " + calcolaArea() + "cm2");
             Console.WriteLine("-----------------");
+        }
+
+        public void Disegna()
+        {
+            string unitaX = "--";
+            string unitaY = "|";
+
+            Console.Write(" ");
+            for(int i = 0; i < baseRettangolo - 1; i++) //lato superiore
+            {
+                Console.Write(unitaX);
+            }
+            Console.WriteLine(unitaX);
+            for (int i = 0; i < altezzaRettangolo; i++)
+            {
+                Console.Write(unitaY);
+                for (int j = 0; j < baseRettangolo; j++) //lati laterali
+                {
+                    Console.Write("  ");
+                }
+                Console.WriteLine(unitaY);
+            }
+            Console.Write(" ");
+            for (int i = 0; i < baseRettangolo; i++) //lato inferiore
+            {
+                Console.Write(unitaX);
+            }
         }
     }
 }
